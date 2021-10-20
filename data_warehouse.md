@@ -13,6 +13,8 @@ You can think of Data Warehouse as a relational database where processed busines
     <img src="images/data_warehouse.jpg" alt="Data Warehouse Architecture Example" />
 </p>
 
+## Data Mart
+A data mart is a subset of the data warehouse. It specially designed for a particular line of business, such as sales, finance, sales or finance. In an independent data mart, data can collect directly from sources.
 
 ## Modelagem Dimensional
 Modelagem dimensional é uma das técnicas e conhecimentos mais utilizados e mais importantes para modelar o Data Warehouse.
@@ -93,3 +95,4 @@ Já a Natural Key é a Primary Key daquele dado na origem ou legado, é o que vo
 - [Data Warehouse - O que é Tabela Fato](https://rafaelpiton.com.br/blog/data-warehouse-tipos-fatos/)
 - [Differences Between a Data Warehouse, Data Lake, and a Database](https://www.confluent.io/learn/databases-data-lakes-and-data-warehouses-compared/)
 - [Data Lake vs Data Warehouse](https://luminousmen.com/post/data-lake-vs-data-warehouse)
+- [What is Data Warehouse? Types, Definition & Example](https://www.guru99.com/data-warehousing.html)
