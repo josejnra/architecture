@@ -4,7 +4,7 @@ Now new systems are beginning to emerge that address the limitations of both Dat
 A data lakehouse is a new, open **data management architecture** that combines the flexibility, cost-efficiency, and scale of data lakes with the data management and ACID transactions of data warehouses, enabling business intelligence (BI) and machine learning (ML) on all data.
 
 <p align="center">
-    <img src="images/data-lakehouse-new.png" alt="Data Lakehouse" />
+    <img src="images/data_lakehouse.png" alt="Data Lakehouse" />
 </p>
 
 There are a few key technology advancements that have enabled the data lakehouse:

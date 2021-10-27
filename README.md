@@ -1,20 +1,17 @@
 # Sumário
 
+- [Lambda Architecture](#lambda-architecture)
+- [Kappa Architecture](#kappa-architecture)
+- [Delta Architecture](#delta-architecture)
 - [Data Warehouse](data_warehouse.md)
 - [Datalake](datalake.md)
 - [Data Lakehouse](data_lakehouse.md)
-
-## Data Warehouse vs Datalake
-- **Different purposes**. Data Warehouses are used by managers, analysts, and other business end-users, while Data Lakes are mainly used by Data Scientists and Data engineers. Recall that Data Lake stores mostly raw unstructured and semi-structured data — telemetry, graphics, logs of user behavior, website metrics, and information systems, as well as other data with different storage formats. They are not yet suitable for daily analytics in BI systems but can be used by Data Scientists to test new business hypotheses using statistical algorithms and Machine Learning methods.
-- **Different processing methods**. ETL is a popular data processing paradigm in many popular data warehousing. Essentially we extract data from a source or sources, clean it up, and convert it into the structured information we need, and upload it. With Data Lakes we use another paradigm ELT(Extract, Load, Transform) because the transformation takes place in the later stages and only if needed not upfront.
-- **Different levels of understanding of the data**. In Data Lakes data is never rejected because it is stored in an unprocessed format. This is especially useful in an environment with large data if you do not know in advance what information will be obtained from the data analysis. At the same time, the central database(s) is the foundation of the data warehousing environment. Usually, such databases are implemented on RDBMS technology and therefore the necessary in-depth design of the data model is required.
-- **Different approaches to design**. Data Warehouse design is based on relational data handling logic - the third normal form for normalized storage, star or snowflake schemes for storage. When designing the data lake, the Big Data Architect and Data Engineer pay more attention to ETL processes, taking into account the diversity of sources and consumers of information. And the question of storage is solved quite simply - you only need a scalable, fault-tolerant, and relatively cheap file system, such as HDFS or AWS S3.
-- **Different price**. Usually, Data Lake is built on the basis of cheap servers with Apache Hadoop, without expensive licenses and powerful equipment, in contrast to a lot of maintenance costs as well as large costs of design and purchase of specialized platforms for Data Warehouse, such as SAP, Oracle, Teradata, etc.
+- [Data Warehouse vs Datalake](#data-warehouse-vs-datalake)
 
 ## Lambda Architecture
 Lambda architecture is a way of processing massive quantities of data (i.e. “Big Data”) that provides access to batch-processing and stream-processing methods with a hybrid approach. Lambda architecture is used to solve the problem of computing arbitrary functions. The lambda architecture itself is composed of 3 layers:
 <p align="center">
-    <img src="images/lambda-architecture.jpg" alt="Lambda Architecture" />
+    <img src="images/lambda_architecture.jpg" alt="Lambda Architecture" />
 </p>
 
 ### Batch Layer
@@ -47,7 +44,7 @@ The Kappa Architecture supports (near) real-time analytics when the data is read
 
 In other words...Kappa architecture is a streaming-first architecture deployment pattern – where data coming from streaming, IoT, batch or near-real time (such as change data capture), is ingested into a messaging system like Apache Kafka. A stream processing engine (like Apache Spark, Apache Flink, etc.) reads data from the messaging system, transforms it, and publishes the enriched data back to the messaging system, making it available for real-time analytics. Additionally, the data is distributed to the serving layer such as a cloud data lake, cloud data warehouse, operational intelligence or alerting systems for self-service analytics and machine learning (ML), reporting, dashboarding, predictive and preventive maintenance as well as alerting use cases.
 <p align="center">
-    <img src="images/kappa-architecture.jpg" alt="Kappa Architecture" />
+    <img src="images/kappa_architecture.jpg" alt="Kappa Architecture" />
 </p>
 
 Kappa architecture is not a substitute for Lambda architecture. It is, in fact, an alternative approach for data management within the organization. It can be used in architectures where the batch layer is not needed for meeting the quality of service needs of the organization as well as in the scenarios where complex transformations including data quality techniques can be applied in streaming layer. Kappa architecture is being used in streaming-first deployment patterns where data sources are both batch and real time and where end-to-end latency requirements are very stringent.
@@ -69,6 +66,14 @@ One advantage of the Lambda Architecture, however, is that much larger data sets
 Delta architecture assumes that any new streaming records are processed like delta (incremental) records and are not processed as new records. Conceptually this architecture patterns is similar to Lambda as it is based on speed and hot path. The one big difference is that delta architecture no longer considers data lake as immutable, and any batch transformation can update the existing data structures in the data lake (process delta records). This capability makes it easier for cold path to be processed. 
 
 The Delta architecture can be seen as a further evolution of the Kappa architecture, which is based on a data lake and works with structured streaming.
+
+## Data Warehouse vs Datalake
+- **Different purposes**. Data Warehouses are used by managers, analysts, and other business end-users, while Data Lakes are mainly used by Data Scientists and Data engineers. Recall that Data Lake stores mostly raw unstructured and semi-structured data — telemetry, graphics, logs of user behavior, website metrics, and information systems, as well as other data with different storage formats. They are not yet suitable for daily analytics in BI systems but can be used by Data Scientists to test new business hypotheses using statistical algorithms and Machine Learning methods.
+- **Different processing methods**. ETL is a popular data processing paradigm in many popular data warehousing. Essentially we extract data from a source or sources, clean it up, and convert it into the structured information we need, and upload it. With Data Lakes we use another paradigm ELT(Extract, Load, Transform) because the transformation takes place in the later stages and only if needed not upfront.
+- **Different levels of understanding of the data**. In Data Lakes data is never rejected because it is stored in an unprocessed format. This is especially useful in an environment with large data if you do not know in advance what information will be obtained from the data analysis. At the same time, the central database(s) is the foundation of the data warehousing environment. Usually, such databases are implemented on RDBMS technology and therefore the necessary in-depth design of the data model is required.
+- **Different approaches to design**. Data Warehouse design is based on relational data handling logic - the third normal form for normalized storage, star or snowflake schemes for storage. When designing the data lake, the Big Data Architect and Data Engineer pay more attention to ETL processes, taking into account the diversity of sources and consumers of information. And the question of storage is solved quite simply - you only need a scalable, fault-tolerant, and relatively cheap file system, such as HDFS or AWS S3.
+- **Different price**. Usually, Data Lake is built on the basis of cheap servers with Apache Hadoop, without expensive licenses and powerful equipment, in contrast to a lot of maintenance costs as well as large costs of design and purchase of specialized platforms for Data Warehouse, such as SAP, Oracle, Teradata, etc.
+
 
 ## Referências
 - [Data Lake vs Data Warehouse](https://luminousmen.com/post/data-lake-vs-data-warehouse)
