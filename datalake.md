@@ -11,6 +11,6 @@ Although Data Warehouses can handle unstructured data, they cannot do so efficie
 
 Lakes are better choices for storing large amounts of records in case someone wants access to a few or many of them in the future. Regulatory compliance is a common use case.
 
-## Referências
+## Referencies
 - [Data Lake vs Data Warehouse](https://luminousmen.com/post/data-lake-vs-data-warehouse)
 - [Understanding when to use a database, data lake, or data warehouse](https://venturebeat.com/2021/04/28/understanding-when-to-use-a-database-data-lake-or-data-warehouse/)

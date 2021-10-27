@@ -36,7 +36,7 @@ A lakehouse has the following key features:
 - **End-to-end streaming**: Real-time reports are the norm in many enterprises. Support for streaming eliminates the need for separate systems dedicated to serving real-time data applications.
 
 
-## Referências
+## Referencies
 - [Data Lake vs Data Warehouse](https://luminousmen.com/post/data-lake-vs-data-warehouse)
 - [Data Lakehouse](https://databricks.com/glossary/data-lakehouse)
 - [What Is a Lakehouse?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)

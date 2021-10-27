@@ -1,4 +1,4 @@
-# Sumário
+# Summary
 
 - [Lambda Architecture](#lambda-architecture)
 - [Kappa Architecture](#kappa-architecture)
@@ -75,7 +75,7 @@ The Delta architecture can be seen as a further evolution of the Kappa architect
 - **Different price**. Usually, Data Lake is built on the basis of cheap servers with Apache Hadoop, without expensive licenses and powerful equipment, in contrast to a lot of maintenance costs as well as large costs of design and purchase of specialized platforms for Data Warehouse, such as SAP, Oracle, Teradata, etc.
 
 
-## Referências
+## Referencies
 - [Data Lake vs Data Warehouse](https://luminousmen.com/post/data-lake-vs-data-warehouse)
 - [Lambda Architecture](https://databricks.com/glossary/lambda-architecture)
 - [Introduction to Delta Architecture](https://www.thedigitaltalk.com/blog/2019-9-introduction-to-delta-architecture/)
