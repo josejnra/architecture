@@ -3,6 +3,7 @@
 - [Lambda Architecture](#lambda-architecture)
 - [Kappa Architecture](#kappa-architecture)
 - [Delta Architecture](#delta-architecture)
+- [Delta Lake](delta_lake.md)
 - [Data Warehouse](data_warehouse.md)
 - [Datalake](datalake.md)
 - [Data Lakehouse](data_lakehouse.md)
