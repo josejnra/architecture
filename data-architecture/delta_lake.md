@@ -23,7 +23,7 @@ Specifically, Delta Lake offers:
 - To work with data lakehouse 
 
 
-## Referencies
+## References
 - [What is Delta Lake?](https://databricks.com/product/delta-lake-on-databricks)
 - [Delta Intro](https://docs.delta.io/latest/delta-intro.html)
 - [Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
